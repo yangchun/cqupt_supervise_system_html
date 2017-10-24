@@ -1,0 +1,108 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul side-navigation class="nav" id="side-menu">
+            <li class="nav-header">
+                <div class="dropdown profile-element">
+                    <img alt="image" width="48" height="48" class="img-circle" src="{{headImgUrl}}" />
+                    <a class="dropdown-toggle" href>
+                        <span class="clear">
+                            <span class="block m-t-xs">
+                                <strong class="font-bold">{{nick}}</strong>
+                            </span>
+                        </span>
+                    </a>
+                </div>
+                <div class="logo-element">
+                    {{'FENGQU' | translate}}
+                </div>
+            </li>
+            <!-- 商品管理 -->
+            <li>
+              <a href=""><i class="fa fa-gift"></i> <span class="nav-label">{{'PRODUCT_CONTROL' | translate}}</span><span class="fa arrow"></span></a>
+               <ul class="nav nav-second-level">
+                <li ui-sref-active=""><a ui-sref="product" ng-click="clickNavButton(this)">{{'ADD_PRODUCT' | translate}}</a></li>
+                <li ui-sref-active=""><a ui-sref="productList" ng-click="clickNavButton(this)">{{'PRODUCTLIST' | translate}}</a></li>
+                <li ui-sref-active=""><a ui-sref="batchImportThirdSkuId" ng-click="clickNavButton(this)">{{'BATCH_IMPORT_THIRD_SKU_ID' | translate}}</a></li>
+               </ul>
+            </li>
+            <!-- 店铺管理 -->
+            <!-- <li>
+              <a href=""><i class="fa fa-user"></i> <span class="nav-label">{{'STORE_CONTROL' | translate}}</span><span class="fa arrow"></span></a>
+               <ul class="nav nav-second-level">
+                <li ui-sref-active=""><a ui-sref="storeInfo">{{'STORE_INFO' | translate}}</a></li>
+               </ul>
+            </li> -->
+            <!-- 库存管理 -->
+            <li>
+              <a href=""><i class="fa fa-gift"></i> <span class="nav-label">{{'STOCK_CONTROL' | translate}}</span><span class="fa arrow"></span></a>
+              <ul class="nav nav-second-level">
+                <li ui-sref-active=""><a ui-sref="productManagement" ng-click="clickNavButton(this)">{{'STOCK_LIST' | translate}}</a></li>
+                <li ui-sref-active=""><a ui-sref="batchAdjustStock" ng-click="clickNavButton(this)">{{'BATCH_STOCK_ADD' | translate}}</a></li>
+                <li ui-sref-active=""><a ui-sref="batchEditSupplyPrice" ng-click="clickNavButton(this)">{{'BATCH_EDIT_SUPPLY_PRICE' | translate}}</a></li>
+                <li ui-sref-active=""><a ui-sref="batchEditActivityPrice" ng-click="clickNavButton(this)">{{'BATCH_EDIT_ACTIVITY_PRICE' | translate}}</a></li>
+              </ul>
+            </li>
+            <!-- 订单管理 -->
+            <li>
+                <a href=""><i class="fa fa-list-alt"></i> <span class="nav-label">{{'ORDER_CONTROL' | translate}}</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li ui-sref-active=""><a ui-sref="orderlist" ng-click="clickNavButton(this)">{{'ORDER_SEARCH' | translate}}</a></li>
+                </ul>
+            </li>
+            <!-- 发货管理 -->
+            <li>
+                <a href=""><i class="fa fa-truck"></i><span class="nav-label">{{'SHIPPING_MANAGE' | translate}}</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li ui-sref-active=""><a ui-sref="delivermanagement" ng-click="clickNavButton(this)">{{'SHIPPING_LIST' | translate}}</a></li>
+                    <li ui-sref-active=""><a ui-sref="uploadtracknum" ng-click="clickNavButton(this)">{{'UPLOAD_ORDERS' | translate}}</a></li>
+                    <li ui-sref-active=""><a ui-sref="batchSetDispatch" ng-click="clickNavButton(this)">{{'BATCH_SET_DISPATCH' | translate}}</a></li>
+                </ul>
+            </li>
+            <!-- 财务管理 -->
+            <li>
+                <a href=""><i class="fa fa-bar-chart-o"></i> <span class="nav-label">{{'SETTLEMENT_MANAGE' | translate}}</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li ui-sref-active=""><a ui-sref="settlementManageList" ng-click="clickNavButton(this)">{{'SETTLEMENT_LIST' | translate}}</a></li>
+                </ul>
+            </li>
+            <!-- 归档数据 -->
+            <li>
+                <a href=""><i class="fa fa-delicious"></i> <span class="nav-label">{{'SUPPLY_INFO' | translate}}</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li ><a ui-sref="priceadjustment" ng-click="clickNavButton(this)">{{'ACTIVITY_PRICE_HISTORY' | translate}}</a></li>
+                    <li ><a ui-sref="supplypriceadjustment" ng-click="clickNavButton(this)">{{'SUPPLY_PRICE_HISTORY' | translate}}</a></li>
+                    <li ><a ui-sref="mixedpriceadjustment" ng-click="clickNavButton(this)">{{'MIXED_PRICE_HISTORY' | translate}}</a></li>
+                    <li ><a ui-sref="mixedpriceadjustmentv1" ng-click="clickNavButton(this)">{{'NEW_MIXED_PRICE_HISTORY' | translate}}</a></li>
+                </ul>
+            </li>
+            <!-- 下载管理 -->
+            <li>
+                <a href=""><i class="fa fa-arrow-circle-o-down"></i> <span class="nav-label">{{'DOWNLOAD_CONTROL' | translate}}</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li ><a ui-sref="downloadList" ng-click="clickNavButton(this)">{{'DOWNLOAD_LIST' | translate}}</a></li>
+                </ul>
+            </li>
+            <!-- 工单管理 -->
+            <li>
+              <a href=""><i class="fa fa-arrow-circle-o-down"></i> <span class="nav-label">{{'TICKET' | translate}}</span><span class="fa arrow"></span></a>
+              <ul class="nav nav-second-level">
+                <li ><a ui-sref="ticketList" ng-click="clickNavButton(this)">{{'TICKET_LIST' | translate}}</a></li>
+                <!--<li ><a ui-sref="ticketDetail">{{'TICKET_DETAIL' | translate}}</a></li>-->
+              </ul>
+            </li>
+            <!-- 平台公告 -->
+            <li>
+                <a href=""><i class="fa fa-envelope-o"></i> <span class="nav-label">{{'ANNOUNCEMENT' | translate}}</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li ng-if="language=='zh'" ui-sref-active=""><a ui-sref="accessRules" ng-click="clickNavButton(this)">{{'SUPPLIER_ACCESS_AUDIT_PROCESS_AND_STANDARDS' | translate}}</a></li>
+                    <li ng-if="language=='zh'" ui-sref-active=""><a ui-sref="announcement" ng-click="clickNavButton(this)">{{'SUPPLIER_IRREGULARITIES_AND_BASIC_RULES' | translate}}</a></li>
+                    <li ng-if="language=='zh'" ui-sref-active=""><a ui-sref="packingInstructions" ng-click="clickNavButton(this)">{{'DELIVERY_PACKING_INSTRUCTIONS' | translate}}</a></li>
+                    <li ng-if="language=='zh'" ui-sref-active=""><a ui-sref="deliveryRules" ng-click="clickNavButton(this)">{{'SUPPLIER_DELIVERY_RULES_VIOLATIONS' | translate}}</a></li>
+                </ul>
+            </li>
+            <li>
+                <a ui-sref="pwdedit" ng-click="clickNavButton(this)"><i class="fa fa-edit"></i> <span class="nav-label">{{'CHANGE_PWD' | translate}}</span></a>
+            </li>
+        </ul>
+    </div>
+</nav>

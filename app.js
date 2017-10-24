@@ -10,6 +10,7 @@ var app = express();
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+var test = require('./routes/test');
 
 
 // view engine setup
@@ -31,23 +32,7 @@ app.use(express.static(path.join(__dirname, '')));
 
 app.use('/', index);
 app.use('/users', users);
-app.use('/*.html',function(request, response){
-    fs.readFile("./"+request.path.substr(1),function(err,data){
-        // body
-        if(err){
-            console.log(err);
-            //404：NOT FOUND
-            response.writeHead(404,{"Content-Type":"text/html"});
-        }
-        else{
-            //200：OK
-            response.writeHead(200,{"Content-Type":"text/html"});
-            response.write(data.toString());
-        }
-        response.end();
-    });
-});
-
+app.use('/test',test);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
